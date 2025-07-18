@@ -9,10 +9,18 @@
 
         public Enrollment(Course course, Student takenBy)
         {
-            Course = course;
-            TakenBy = takenBy;
+            Course = course ?? throw new ArgumentNullException(nameof(course));
+            TakenBy = takenBy ?? throw new ArgumentNullException(nameof(takenBy));
             EnrollmentDate = DateTime.Now;
             IsCompleted = false;
+
+            // Add this enrollment to the course's collection
+            course.AddEnrollment(this);
+        }
+
+        public void Complete()
+        {
+            IsCompleted = true;
         }
     }
 }
