@@ -21,7 +21,8 @@
 
         public virtual double CalculateRentalCost(int rentedDays)
         {
-            if(rentedDays < 0) throw new InvalidOperationException("Invalid rent days");
+            if (rentedDays < 0)
+                throw new InvalidOperationException("Invalid rent days");
 
             return RentalCostPerDay * rentedDays;
         }
