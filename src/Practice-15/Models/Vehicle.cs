@@ -2,11 +2,11 @@
 {
     public class Vehicle
     {
-        public int Id { get; protected set; }
-        public string Brand { get; protected set; }
-        public string Model { get; protected set; }
-        public int YearOfManufacture { get; protected set; }
-        public virtual double RentalCostPerDay { get; protected set; }
+        public int Id { get; private set; }
+        public string Brand { get; private set; }
+        public string Model { get; private set; }
+        public int YearOfManufacture { get; private set; }
+        public double RentalCostPerDay { get; protected set; }
 
         public Vehicle(int id, string brand, string model, int yearOfManufacture, double rentalCostPerDay)
         {
