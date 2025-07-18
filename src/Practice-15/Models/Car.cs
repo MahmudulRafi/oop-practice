@@ -2,9 +2,9 @@
 {
     public class Car : Vehicle
     {
-        private new const double RentalCostPerDay = 50.0;
+        private const double RENT_PER_DAY = 50.0;
         public Car(int id, string brand, string model, int yearOfManufacture)
-            : base(id, brand, model, yearOfManufacture, RentalCostPerDay)
+            : base(id, brand, model, yearOfManufacture, RENT_PER_DAY)
         {
             var carAge = base.GetVehicleAge();
 

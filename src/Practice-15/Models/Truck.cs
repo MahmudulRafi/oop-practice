@@ -2,17 +2,17 @@
 {
     public class Truck : Vehicle
     {
-        private new const double RentalCostPerDay = 100.0;
-        private const double MaintainanceCostPerDay = 100.0;
+        private const double RENT_PER_DAY = 100.0;
+        private const double MAINTAINANCE_COST_PER_DAY = 100.0;
         public Truck(int id, string brand, string model, int yearOfManufacture)
-            : base(id, brand, model, yearOfManufacture, RentalCostPerDay)
+            : base(id, brand, model, yearOfManufacture, RENT_PER_DAY)
         {
 
         }
 
         public override double CalculateRentalCost(int rentedDays)
         {
-            return base.CalculateRentalCost(rentedDays) + (MaintainanceCostPerDay * rentedDays);
+            return base.CalculateRentalCost(rentedDays) + (MAINTAINANCE_COST_PER_DAY * rentedDays);
         }
     }
 }

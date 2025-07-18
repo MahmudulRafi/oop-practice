@@ -2,9 +2,9 @@
 {
     public class Bike : Vehicle
     {
-        private new const double RentalCostPerDay = 15.0;
+        private const double RENT_PER_DAY = 15.0;
         public Bike(int id, string brand, string model, int yearOfManufacture)
-            : base(id, brand, model, yearOfManufacture, RentalCostPerDay)
+            : base(id, brand, model, yearOfManufacture, RENT_PER_DAY)
         {
 
         }
